@@ -12,26 +12,26 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
           <!-- SEO Meta Data -->
-          <title>My Landing Page</title>
-          <meta name="author" content="Matthew Wagerfield">
-          <meta name="description" content="Simple, lightweight Parallax Engine that reacts to the orientation of a smart device">
-          <meta name="keywords" content="parallax,javascript,jquery,zepto,plugin">
+          <title>${P.title}</title>
+          <meta name="author" content="${P.author_name}">
+          <meta name="description" content="${P.product_description}">
+          <meta name="keywords" content="${P.product_keywords}">
 
           <!-- Open Graph Meta Data -->
-          <meta property="og:description" content="Simple, lightweight Parallax Engine that reacts to the orientation of a smart device">
-          <meta property="og:image" content="http://wagerfield.github.io/parallax/assets/images/thumbnail.png">
-          <meta property="og:site_name" content="parallax.js">
-          <meta property="og:title" content="parallax.js">
+          <meta property="og:description" content="${P.product_description}">
+          <meta property="og:image" content="${P.product_icon}">
+          <meta property="og:site_name" content="${P.product_url}">
+          <meta property="og:title" content="${P.productname}">
           <meta property="og:type" content="website">
-          <meta property="og:url" content="http://wagerfield.github.io/parallax/index.html">
+          <meta property="og:url" content="${P.product_url}">
 
           <!-- Twitter Card Meta Data -->
           <meta name="twitter:card" content="summary_large_image">
-          <meta name="twitter:site" content="http://wagerfield.github.io/parallax/index.html">
-          <meta name="twitter:creator" content="@mwagerfield">
-          <meta name="twitter:title" content="parallax.js">
-          <meta name="twitter:description" content="Simple, lightweight Parallax Engine that reacts to the orientation of a smart device">
-          <meta name="twitter:image" content="http://wagerfield.github.io/parallax/assets/images/thumbnail.png">
+          <meta name="twitter:site" content="${P.product_url}">
+          <meta name="twitter:creator" content="${P.author_twittername}">
+          <meta name="twitter:title" content="${P.productname}">
+          <meta name="twitter:description" content="${P.product_description}">
+          <meta name="twitter:image" content="${P.product_icon}">
 
           <!-- Humans -->
           <link rel="author" href="humans.txt" />
@@ -49,8 +49,8 @@
           <link rel="shortcut icon" href="/favicon.png" type="image/png">
           <link rel="shortcut icon" href="http://wagerfield.github.io/parallax/favicon.png" type="image/png">
 
-          <!-- Apple Touch Icons -->
-          <!-- !!!! These sizes are wrong -->
+            <!-- Apple Touch Icons -->
+            <!-- !!!! These sizes are wrong -->
           <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
           <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
           <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
@@ -92,7 +92,7 @@
             <div id="searchDropdown" class="search-drop hidden">
               <form action="/Guide/Search" method="get" class="ignoreCSRF">
                 <div class="header-container">
-                  <span class="search-title">Search iFixit:</span>
+                  <span class="search-title">Search</span>
                   <input type="text" name="query" id="searchForm" class="search-field" placeholder="Enter keywords" spellcheck="false">
                   <button class="search-submit" id="searchSubmit" type="submit"><i class="fa fa-search"></i></button>
                   <i class="search-close search-toggle fa fa-times"></i>
@@ -111,7 +111,7 @@
                           <span class="icon-bar"></span>
                           <span class="icon-bar"></span>
                         </button>
-                        <a href="http://dstroot.github.io/landing-page-example/" class="navbar-brand"><i class="fa fa-star fa-lg"></i> Awesomesauce!</a>
+                        <a href="${P.product_url}" class="navbar-brand"><i class="fa fa-star fa-lg"></i>${P.productname}</a>
                     </div>
                     <nav class="collapse navbar-collapse" role="navigation">
                         <ul class="nav navbar-nav navbar-right">
@@ -131,9 +131,6 @@
                             <li>
                               <a href="map.html">About</a>
                             </li>
-                            <li>
-                              <a href="different.html">Different Look</a>
-                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -144,7 +141,7 @@
             <div id="home" class="jumbotron">
                 <div class="container">
                     <h1>
-                        Tell the Awesome Story!
+                      ${P.banner}
                     </h1>
                     <div class="row">
                         <div class="col-md-8 col-md-push-4">
@@ -153,13 +150,13 @@
                         </div>
                         <div class="col-md-offset-1 col-md-3 col-md-pull-8">
                           <ul class='fa-ul visible-md visible-lg'>
-                              <li><i class="fa fa-li fa-cog"></i>Flat design</li>
-                              <li><i class="fa fa-li fa-heart"></i>Responsive</li>
-                              <li><i class="fa fa-li fa-cloud"></i>Bootstrap 3</li>
-                              <li><i class="fa fa-li fa-magic"></i>Built with LESS</li>
+                              <li><i class="fa fa-li fa-cog"></i>${P.usp1_banner}</li>
+                              <li><i class="fa fa-li fa-heart"></i>${P.usp2_banner}</li>
+                              <li><i class="fa fa-li fa-cloud"></i>${P.usp3_banner}</li>
+                              <li><i class="fa fa-li fa-magic"></i>${P.usp4_banner}</li>
                           </ul>
                           <p>
-                              <a class="btn btn-primary btn-lg" role="button">Learn More <i class="fa fa-chevron-right"></i></a>&nbsp;<a class="btn btn-default btn-lg" role="button">Sign In <i class="fa fa-chevron-right"></i></a>
+                              <a class="btn btn-primary btn-lg" role="button">Learn More<i class="fa fa-chevron-right"></i></a>&nbsp;<a class="btn btn-default btn-lg" role="button">Sign In <i class="fa fa-chevron-right"></i></a>
                           </p>
                         </div>
                     </div>
@@ -176,10 +173,10 @@
                 <!-- hero content -->
                 <div class="hero-content">
                     <h2>
-                        Emilia Johnson
+                      ${P.testimonial1_name}
                     </h2>
                     <p>
-                        Hi, I'm Emilia, a freelance designer based on Paris. Specialist on web design and UI concepts.
+                      ${P.testimonial1_pullquote}
                     </p>
                     <p>
                         <a class="btn btn-primary btn-lg" href="#profile">Find Out More <i class="fa fa-chevron-right"></i></a>
@@ -194,10 +191,10 @@
             <div class="jumbotron">
                 <div class="container">
                     <h1>
-                        Hello Everyone!
+                      ${P.core_market_address_banner}
                     </h1>
                     <p>
-                        This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+                      ${P.core_market_address_byline}
                     </p>
                     <p>
                         <a class="btn btn-primary btn-lg" role="button">Learn more <i class="fa fa-chevron-right"></i></a>
@@ -205,44 +202,32 @@
                 </div>
             </div>
 
-            <!-- Hubspot
-            ======================================== -->
-            <div class='container'>
-              <div class="share-buttons">
-                <div class="share-button twitter-share-button">
-                  <iframe src="http://hubstar.io/twitter/spin?via=HubSpotDev&amp;hashtags=YMNNJQ&amp;text=You%20might%20not%20need%20jQuery&amp;url=http://YouMightNotNeedjQuery.com&amp;name=%22You%20might%20not%20need%20jQuery%22"></iframe>
-                </div>
-                <div class="share-button github-stars-button">
-                  <iframe src="http://hubstar.io/github/spin/HubSpot/YouMightNotNeedjQuery"></iframe>
-                </div>
-              </div>
-            </div>
 
             <!-- Marketing Section
             ======================================== -->
             <div class='container marketing hidden-xs'>
                 <div class='row'>
                     <div class='col-md-12'>
-                        <h1>Why choose Awesomesauce?</h1>
+                        <h1>Why choose ${P.productname}?</h1>
                     </div>
                 </div>
                 <div class='row'>
                     <div class='col-md-4'>
-                        <h3><i class='fa fa-thumbs-o-up fa-lg brand5'></i>  Make it your own</h3>
+                        <h3><i class='fa fa-thumbs-o-up fa-lg brand5'></i> ${P.usp1_banner}</h3>
                         <p>
-                            Easily change every color, by changing just few variables. Add or remove pages, and choose from 600+ fonts.
+                          ${P.usp1_byline}
                         </p>
                     </div>
                     <div class='col-md-4'>
-                        <h3><i class="fa fa-magic fa-lg brand5"></i>  Page speed</h3>
+                        <h3><i class="fa fa-magic fa-lg brand5"></i> ${P.usp2_banner}</h3>
                         <p>
-                            The theme is optimized to ensure fast loading time by lazy-loading of images and beeing minimal by design.
+                          ${P.usp2_byline}
                         </p>
                     </div>
                     <div class='col-md-4'>
-                        <h3><i class="fa fa-tablet fa-lg brand5"></i>  For every device</h3>
+                        <h3><i class="fa fa-tablet fa-lg brand5"></i> ${P.usp3_banner}</h3>
                         <p>
-                            The Story is built to look great on every device. Custom menu for mobile devices, to ensure the best expierence.
+                          ${P.usp3_byline}
                         </p>
                     </div>
                 </div>
@@ -252,9 +237,9 @@
             ======================================== -->
             <div class="jumbotron gradient-background">
               <h2>
-                <i class="fa fa-quote-left"></i> Write drunk. Edit sober <i class="fa fa-quote-right"></i>
+                <i class="fa fa-quote-left"></i> ${P.testimonial2_pullquote} <i class="fa fa-quote-right"></i>
               </h2>
-              <h2><small>- Ernest Hemmingway</small></h2>
+              <h2><small>- ${P.testimonial2_name}</small></h2>
             </div>
 
             <!-- Featurettes
@@ -265,42 +250,42 @@
                 <div class="row">
                     <div class="col-sm-7">
                         <h1>
-                            First featurette heading. <span class="text-muted">It'll blow your mind.</span>
+                            ${P.feature1_banner} <span class="text-muted">${P.feature1_slogan} </span>
                         </h1>
                         <p class="lead hidden-xs">
-                            Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+                          ${P.feature1_byline}
                         </p>
                     </div>
                     <div class="col-sm-5">
-                        <img class="img-rounded img-responsive pull-right" src="img/coffee.gif" alt="Generic placeholder image">
+                        <img class="img-rounded img-responsive pull-right" src="${feature1_img_url}" alt="${feature1_img_alt}">
                     </div>
                 </div>
                 <hr>
                 <div class="row">
                     <div class="col-sm-7 col-sm-push-5">
                         <h1>
-                            Oh yeah, it's that good. <span class="text-muted">See for yourself.</span>
+                            ${P.feature2_banner} <span class="text-muted">${P.feature2_slogan} </span>
                         </h1>
                         <p class="lead hidden-xs">
-                            Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+                          ${P.feature2_byline}
                         </p>
                     </div>
                     <div class="col-sm-5 col-sm-pull-7">
-                        <img class="img-rounded img-responsive" src="img/coffee.gif" alt="Generic placeholder image">
+                        <img class="img-rounded img-responsive pull-left" src="${feature2_img_url}" alt="${feature2_img_alt}">
                     </div>
                 </div>
                 <hr>
                 <div class="row">
                     <div class="col-sm-7">
                         <h1>
-                            And lastly, this one. <span class="text-muted">Checkmate.</span>
+                            ${P.feature3_banner} <span class="text-muted">${P.feature3_slogan} </span>
                         </h1>
                         <p class="lead hidden-xs">
-                            Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+                          ${P.feature3_byline}
                         </p>
                     </div>
                     <div class="col-sm-5">
-                        <img class="img-rounded img-responsive pull-right" src="img/coffee.gif" alt="Generic placeholder image">
+                        <img class="img-rounded img-responsive pull-right" src="${feature3_img_url}" alt="${feature3_img_alt}">
                     </div>
                 </div>
             </div>
@@ -358,15 +343,15 @@
                 <div class='container'>
                   <ul class="list-unstyled list-inline">
                     <li>
-                      <a href="http://blog.yourkarma.com"><i class="fa fa-bullhorn"></i>&nbsp;&nbsp;Blog</a>
+                      <a href="${P.product_blog_url}"><i class="fa fa-bullhorn"></i>&nbsp;&nbsp;Blog</a>
                     </li>
                     <li>&middot;</li>
                     <li>
-                      <a href="http://twitter.com/#!/yourkarma" target="_blank" class="txta txta-twitter"><i class="fa fa-twitter"></i>&nbsp;&nbsp;Twitter</a>
+                      <a href="${P.twitter_url}" target="_blank" class="txta txta-twitter"><i class="fa fa-twitter"></i>&nbsp;&nbsp;Twitter</a>
                     </li>
                     <li>&middot;</li>
                     <li>
-                      <a href="https://www.facebook.com/getyourkarma" target="_blank" class="txta txta-facebook"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Facebook</a>
+                      <a href="${P.fb_url}" target="_blank" class="txta txta-facebook"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Facebook</a>
                     </li>
                   </ul>
                     <!-- <ul class="list-unstyled list-inline">
@@ -392,7 +377,7 @@
                             </h4>
                             <ul class='fa-ul'>
                                 <li>
-                                    <i class="fa fa-li fa-bullhorn"></i><a href="http://blog.yourkarma.com">Blog</a>
+                                    <i class="fa fa-li fa-bullhorn"></i><a href="${P.blog_url}">Blog</a>
                                 </li>
                                 <li>
                                     <i class="fa fa-li fa-book"></i><a href="/privacy">Privacy Policy</a>
@@ -406,10 +391,10 @@
                             <h4>Connect</h4>
                             <ul class='fa-ul'>
                                 <li>
-                                    <i class="fa-li fa fa-twitter"></i><a href="http://twitter.com/#!/yourkarma" target="_blank" class="txta txta-twitter">Twitter</a>
+                                    <i class="fa-li fa fa-twitter"></i><a href="${P.twitter_url}" target="_blank" class="txta txta-twitter">Twitter</a>
                                 </li>
                                 <li>
-                                    <i class="fa-li fa fa-facebook"></i><a href="https://www.facebook.com/getyourkarma" target="_blank" class="txta txta-facebook">Facebook</a>
+                                    <i class="fa-li fa fa-facebook"></i><a href="${P.fb_url}" target="_blank" class="txta txta-facebook">Facebook</a>
                                 </li>
                                 <li>
                                     <i class="fa-li fa fa-envelope"></i><a href="/contact">Contact Us</a>
@@ -418,7 +403,7 @@
                         </li>
                     </ul> -->
                     <p>
-                        <small>Copyright © 2013 <i class="fa fa-star"></i> Awesomesauce, all rights reserved. | <a href="http://www.livefyre.com/privacy/" title="Privacy Policy" onclick="_gaq.push(['_trackEvent', 'footer', 'click', 'footer_privacyPolicy']);">Privacy Policy</a> | <a href="http://www.livefyre.com/terms/" title="Terms of Use" onclick="_gaq.push(['_trackEvent', 'footer', 'click', 'footer_termsofUse']);">Terms of Use</a></small>
+                        <small>Copyright © 2018 <i class="fa fa-star"></i> ${P.productname}, all rights reserved. | <a href="${P.privacy_policy_url}" title="Privacy Policy" onclick="_gaq.push(['_trackEvent', 'footer', 'click', 'footer_privacyPolicy']);">Privacy Policy</a> | <a href="${P.terms_url}" title="Terms of Use" onclick="_gaq.push(['_trackEvent', 'footer', 'click', 'footer_termsofUse']);">Terms of Use</a></small>
                     </p>
                 </div>
             </footer>
